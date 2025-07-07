@@ -14,6 +14,9 @@
     }
   ],
   "env": {
+    "PYTHONDONTWRITEBYTECODE": "1",
+    "PYTHONUNBUFFERED": "1",
+    "PORT": "8888",
     "API_PASSWORD": "your_password",
     "ENABLE_STREAMING_PROGRESS": "false",
     "DISABLE_HOME_PAGE": "false",
