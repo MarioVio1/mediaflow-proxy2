@@ -1,0 +1,23 @@
+{
+  "version": 2,
+  "builds": [
+    {
+      "src": "mediaflow_proxy/main.py",
+      "use": "@vercel/python",
+      "config": { "maxLambdaSize": "50mb" }
+    }
+  ],
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "mediaflow_proxy/main.py"
+    }
+  ],
+  "env": {
+    "API_PASSWORD": "your_password",
+    "ENABLE_STREAMING_PROGRESS": "false",
+    "DISABLE_HOME_PAGE": "false",
+    "DISABLE_DOCS": "false",
+    "DISABLE_SPEEDTEST": "false"
+  }
+}
